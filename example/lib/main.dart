@@ -66,7 +66,7 @@ class _QRViewExampleState extends State<QRViewExample> {
                 children: <Widget>[
                   if (result != null)
                     Text(
-                        'Barcode Type: ${describeEnum(result!.format)}   Data: ${result!.code}')
+                        'Barcode Type: ${(result!.format)}   Data: ${result!.code}')
                   else
                     const Text('Scan a code'),
                   Row(
@@ -99,7 +99,7 @@ class _QRViewExampleState extends State<QRViewExample> {
                               builder: (context, snapshot) {
                                 if (snapshot.data != null) {
                                   return Text(
-                                      'Camera facing ${describeEnum(snapshot.data!)}');
+                                      'Camera facing ${(snapshot.data!)}');
                                 } else {
                                   return const Text('loading');
                                 }
